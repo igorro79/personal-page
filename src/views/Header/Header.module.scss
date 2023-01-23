@@ -1,0 +1,23 @@
+.wrapper {
+  position: fixed;
+  z-index: 5;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttonsWrapper {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.margin {
+  margin-right: 10px;
+}

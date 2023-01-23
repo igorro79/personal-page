@@ -1,25 +1,60 @@
 @import "../../variables.scss";
 
 .wrapper {
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  background-color: $bg-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../img/mob@1x.jpg");
+  background-image: image-set(
+    url("../../img/mob@1x.webp") 1x,
+    url("../../img/mob@2x.webp") 2x
+  );
+  @media screen and (min-width: 360px) {
+    background-image: url("../../img/tablet@1x.jpg");
+    background-image: image-set(
+      url("../../img/tablet@1x.webp") 1x,
+      url("../../img/tablet@2x.webp") 2x
+    );
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url("../../img/desktop@1x.jpg");
+    background-image: image-set(
+      url("../../img/desktop@1x.webp") 1x,
+      url("../../img/desktop@2x.webp") 2x
+    );
+  }
+  @media screen and (min-width: 1024px) {
+    background-image: url("../../img/xl-desk@1x.jpg");
+    background-image: image-set(
+      url("../../img/xl-desk@1x.webp") 1x,
+      url("../../img/xl-desk@2x.webp") 2x
+    );
+  }
 }
 .subwrapper {
-  color: $text-color;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 88px;
+
   @media screen and (min-width: 768px) {
-    display: flex;
+    padding-top: 89px;
+    padding-bottom: 164px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
 }
 .textblock {
-  @media screen and (min-width: 768px) {
-    margin-right: 50px;
-  }
-}
-.photo {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+  max-width: 390px;
 }

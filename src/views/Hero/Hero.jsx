@@ -1,23 +1,26 @@
 import React from "react";
-import { Container } from "../../components/Container/Container";
-import igor from "../../img/photo.jpg";
+import { Button } from "../../components/Button/Button";
+import { Heading } from "../../components/Heading/Heading";
+
+import { Text } from "../../components/Text/Text";
 import s from "./Hero.module.scss";
 
-export const Hero = () => {
+export const Hero = ({ getToken }) => {
   return (
     <section className={s.wrapper}>
-      <Container>
-        <div className={s.subwrapper}>
-          <div className={s.textblock}>
-            <h1>Hello! My name is Igor.</h1>
-            <p>
-              I'm a Full Stack developer with a strong desire to learn and to
-              create new awsome applications ans services.
-            </p>
-          </div>
-          <img className={s.photo} src={igor} alt="igor" />
+      <div className={s.subwrapper}>
+        <div className={s.textblock}>
+          <Heading>Test assignment for front-end developer</Heading>
+          <Text>
+            What defines a good front-end developer is one that has skilled
+            knowledge of HTML, CSS, JS with a vast understanding of User design
+            thinking as they'll be building web interfaces with accessibility in
+            mind. They should also be excited to learn, as the world of
+            Front-End Development keeps evolving.
+          </Text>
         </div>
-      </Container>
+        <Button onClick={() => getToken()}>Sign up</Button>
+      </div>
     </section>
   );
 };
