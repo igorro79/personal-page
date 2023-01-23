@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./variables.scss";
-import { Footer } from "./views/Footer/Footer";
-import { MyForm } from "./views/Form/Form";
 import { Header } from "./views/Header/Header";
 import { Hero } from "./views/Hero/Hero";
-import { Users } from "./views/Users/Users";
+const MyForm = React.lazy(() => import("./views/Form/Form"));
+const Users = React.lazy(() => import("./views/Users/Users"));
+const Footer = React.lazy(() => import("./views/Footer/Footer"));
+
+// import { MyForm } from "./views/Form/Form";
+// import { Users } from "./views/Users/Users";
 
 function App() {
   const [token, setToken] = useState(null);

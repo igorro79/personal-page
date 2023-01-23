@@ -8,6 +8,7 @@ export const Button = ({ children, type, onClick, className, status }) => {
       onClick={onClick}
       type={type ? type : "button"}
       disabled={status}
+      aria-label={children}
       className={classnames(s.button, { [s.disabled]: status }, className)}
     >
       {children}

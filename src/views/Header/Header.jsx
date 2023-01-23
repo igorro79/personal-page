@@ -2,7 +2,7 @@ import React from "react";
 import { Auth } from "../../components/Auth/Auth";
 import { Button } from "../../components/Button/Button";
 import { Container } from "../../components/Container/Container";
-import logo from "../../img/logo.png";
+import logo from "../../img/cat.svg";
 import s from "./Header.module.scss";
 
 export const Header = ({ token, getUsers, getToken }) => {
@@ -11,7 +11,9 @@ export const Header = ({ token, getUsers, getToken }) => {
       <Container>
         <div className={s.contentWrapper}>
           <img
-            style={{ marginRight: "10px", width: "40px" }}
+            width={40}
+            height={40}
+            style={{ marginRight: "10px" }}
             src={logo}
             alt="logo"
           />

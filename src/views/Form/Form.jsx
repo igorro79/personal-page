@@ -16,7 +16,7 @@ import { Heading } from "../../components/Heading/Heading";
 import successImage from "../../img/success-image.svg";
 import s from "./Form.module.scss";
 
-export const MyForm = ({ token, positions, getUsers }) => {
+const MyForm = ({ token, positions, getUsers }) => {
   const [photo, setPhoto] = useState(null);
   const [success, setSuccess] = useState(false);
 
@@ -226,3 +226,4 @@ export const MyForm = ({ token, positions, getUsers }) => {
     </section>
   );
 };
+export default MyForm;

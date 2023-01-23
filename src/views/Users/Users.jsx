@@ -6,7 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { Button } from "../../components/Button/Button";
 import { Container } from "../../components/Container/Container";
 import s from "./Users.module.scss";
-export const Users = ({ isLoading, users, addUsers, noMoreUsers }) => {
+const Users = ({ isLoading, users, addUsers, noMoreUsers }) => {
   return (
     <section>
       <Container>
@@ -37,3 +37,4 @@ export const Users = ({ isLoading, users, addUsers, noMoreUsers }) => {
     </section>
   );
 };
+export default Users;
