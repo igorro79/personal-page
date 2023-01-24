@@ -8,11 +8,13 @@ export const UserCard = ({ user }) => {
   return (
     <div className={s.wrapper}>
       <Image image={user.photo} name={user.name} />
-      <Text>{user.name}</Text>
+      <Text dots>{user.name}</Text>
       <div>
-        <Text>{user.position}</Text>
+        <Text dots>{user.position}</Text>
         <Tooltip placement="bottom-start" title={user.email}>
-          <Text>{user.email}</Text>
+          <Text className={s.dots} dots>
+            {user.email}
+          </Text>
         </Tooltip>
         <Text>{user.phone}</Text>
       </div>
