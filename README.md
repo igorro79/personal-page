@@ -1,1 +1,1 @@
-## Welcome to my personal info-page!
+## Welcome to my page!
